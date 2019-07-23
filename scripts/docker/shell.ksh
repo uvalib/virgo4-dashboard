@@ -7,4 +7,4 @@ fi
 INSTANCE=virgo4-dashboard
 NAMESPACE=uvadave
 
-docker run -ti -p 8998:3030 $NAMESPACE/$INSTANCE /bin/bash -l
+docker run -ti -p 8998:8080 $NAMESPACE/$INSTANCE /bin/bash -l
