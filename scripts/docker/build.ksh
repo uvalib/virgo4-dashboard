@@ -15,7 +15,7 @@ NAMESPACE=uvadave
 docker pull alpine:3.10
 
 # build the image
-docker build -t $NAMESPACE/$INSTANCE .
+docker build -f package/Dockerfile -t $NAMESPACE/$INSTANCE .
 
 # return status
 exit $?
