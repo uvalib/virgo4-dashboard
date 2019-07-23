@@ -1,0 +1,37 @@
+<% content_for :title do %><%= "Virgo4 #{ENV[ 'TITLE_PREFIX' ]} Dashboard" %><% end %>
+<div class="gridster">
+   <center><div style="font-size: 22px"><%= "Virgo4 #{ENV[ 'TITLE_PREFIX' ]} Dashboard" %></div></center>
+
+  <ul>
+
+     <% services = [ 'CLIENT_LANDING' ] %>
+     <% services.each do |key| %>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+           <div data-id="<%= "#{CONFIG[key]['time']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="1000" data-moreinfo="Response time in mS"></div>
+        </li>
+
+     <% end %>
+
+    <% 5.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+     <% services = [ 'CLIENT_SERVICE',
+                     'POOL_SERVICE',
+                     'SEARCH_SERVICE',
+                     'SOLR_MASTER',
+                     'SOLR_REPLICA_0',
+                     'SOLR_REPLICA_1' ] %>
+     <% services.each do |key| %>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+           <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Statusbox" data-title="<%= "#{CONFIG[key]['title']}" %>" data-text="Down"></div>
+        </li>
+
+     <% end %>
+
+   </ul>
+</div>

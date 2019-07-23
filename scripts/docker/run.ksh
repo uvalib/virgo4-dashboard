@@ -4,7 +4,7 @@ if [ -z "$DOCKER_HOST" ]; then
 fi
 
 # set the definitions
-INSTANCE=statusdash
+INSTANCE=virgo4-dashboard
 NAMESPACE=uvadave
 
 # stop the running instance

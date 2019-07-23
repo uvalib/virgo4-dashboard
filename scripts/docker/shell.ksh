@@ -4,7 +4,7 @@ if [ -z "$DOCKER_HOST" ]; then
 fi
 
 # set the definitions
-INSTANCE=statusdash
+INSTANCE=virgo4-dashboard
 NAMESPACE=uvadave
 
-docker run -ti -p 8999:3030 $NAMESPACE/$INSTANCE /bin/bash -l
+docker run -ti -p 8998:3030 $NAMESPACE/$INSTANCE /bin/bash -l

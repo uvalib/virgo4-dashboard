@@ -1,7 +1,7 @@
 SCHEDULER.every '60s', allow_overlapping: false do
 
-  config = CONFIG['ADMIN']
-  max_response_time = 2000
+  config = CONFIG['CLIENT_LANDING']
+  max_response_time = 1000
 
   service_url = config['url']
   service_title = config['title']

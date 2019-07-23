@@ -8,7 +8,7 @@ echo "building on $DOCKER_HOST"
 echo "*****************************************"
 
 # set the definitions
-INSTANCE=statusdash
+INSTANCE=virgo4-dashboard
 NAMESPACE=uvadave
 
 # pull base image to ensure we have the latest

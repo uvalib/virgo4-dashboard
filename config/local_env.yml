@@ -2,80 +2,45 @@
 # Environment specific definitions
 #
 
-# the libra ETD endpoint(s)
-LIBRA_ETD:
- title: 'Libra ETD'
- url: <%= "#{ENV['LIBRA_ETD_WEBAPP']}/healthcheck" %>
- time: 'libra-etd-time'
+#
+# the endpoints to inspect
+#
 
-# libra ETD admin endpoint(s)
-ADMIN:
- title: 'ETD Admin'
- url: <%= "#{ENV['ADMIN_WEBAPP']}/healthcheck" %>
- time: 'admin-time'
+CLIENT_LANDING:
+ title: 'Client'
+ url: <%= "#{ENV['CLIENT_SERVICE']}/" %>
+ time: 'client-landing-time'
 
-# the registration endpoint(s)
-DEPOSITREG:
- title: 'Registration'
- url: <%= "#{ENV['OPTREG_WEBAPP']}/healthcheck" %>
- time: 'depositreg-time'
+CLIENT_SERVICE:
+ title: 'Client'
+ url: <%= "#{ENV['CLIENT_SERVICE']}/healthcheck" %>
+ id: 'client-service'
 
-# the libra OC endpoint(s)
-LIBRA_OC:
- title: 'Libra OC'
- url: <%= "#{ENV['LIBRA_OC_WEBAPP']}/healthcheck" %>
- time: 'libra-oc-time'
+POOL_SERVICE:
+ title: 'Pool'
+ url: <%= "#{ENV['POOL_SERVICE']}/healthcheck" %>
+ id: 'pool-service'
 
-# the deposit authorization service endpoint(s)
-DEPOSIT_AUTH_SERVICE:
- title: 'Deposit Auth Service'
- url: <%= "#{ENV['DEPOSITAUTH_URL']}/healthcheck" %>
- id: 'deposit-auth-service'
+SEARCH_SERVICE:
+ title: 'Search'
+ url: <%= "#{ENV['SEARCH_SERVICE']}/healthcheck" %>
+ id: 'search-service'
 
-# the deposit registration service endpoint(s)
-DEPOSIT_REG_SERVICE:
- title: 'Deposit Registration Service'
- url: <%= "#{ENV['DEPOSITREG_URL']}/healthcheck" %>
- id: 'deposit-reg-service'
+SOLR_MASTER:
+ title: 'SOLR Master'
+ url: <%= "#{ENV['SOLR_MASTER']}/solr/admin/info/system" %>
+ id: 'solr-master'
 
-# the entity ID service endpoint(s)
-ENTITY_ID_SERVICE:
- title: 'Entity Id Service'
- url: <%= "#{ENV['ENTITYID_URL']}/healthcheck" %>
- id: 'entity-id-service'
+SOLR_REPLICA_0:
+ title: 'SOLR Replica-0'
+ url: <%= "#{ENV['SOLR_REPLICA_0']}/solr/admin/info/system" %>
+ id: 'solr-replica-0'
 
-# the ORCID access service endpoint(s)
-ORCID_ACCESS_SERVICE:
- title: 'ORCID Access Service'
- url: <%= "#{ENV['ORCIDACCESS_URL']}/healthcheck" %>
- id: 'orcid-access-service'
+SOLR_REPLICA_1:
+ title: 'SOLR Replica-1'
+ url: <%= "#{ENV['SOLR_REPLICA_1']}/solr/admin/info/system" %>
+ id: 'solr-replica-1'
 
-# the token authorization service endpoint(s)
-TOKEN_AUTH_SERVICE:
- title: 'Token Auth Service'
- url: <%= "#{ENV['TOKENAUTH_URL']}/healthcheck" %>
- id: 'token-auth-service'
-
-# the user service endpoint(s)
-USER_INFO_SERVICE:
- title: 'User Info Service'
- url: <%= "#{ENV['USERINFO_URL']}/healthcheck" %>
- id: 'user-info-service'
-
-# SOLR service endpoint(s)
-SOLR:
- title: 'SOLR'
- url: <%= "#{ENV['SOLR_URL']}/#/" %>
- id: 'solr-service'
-
-# Fedora service endpoint(s)
-FEDORA:
- title: 'Fedora'
- url: <%= ENV['FEDORA_USER'] && ENV['FEDORA_PASSWD'] && ENV['FEDORA_URL'] ? "http://#{ENV['FEDORA_USER']}:#{ENV['FEDORA_PASSWD']}@#{ENV['FEDORA_URL'].gsub( "http://", "" )}" : '' %>
- id: 'fedora-service'
-
-# redis service endpoint(s)
-REDIS:
- title: 'Redis'
- url: <%= ENV['REDIS_PASSWD'] && ENV['REDIS_HOST'] && ENV['REDIS_PORT'] && ENV['REDIS_DB'] ? "redis://:#{ENV['REDIS_PASSWD']}@#{ENV['REDIS_HOST']}:#{ENV['REDIS_PORT']}/#{ENV['REDIS_DB']}" : '' %>
- id: 'redis-service'
+#
+# end of file
+#

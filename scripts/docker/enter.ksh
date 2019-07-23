@@ -4,7 +4,7 @@ if [ -z "$DOCKER_HOST" ]; then
 fi
 
 # set the definitions
-INSTANCE=statusdash
+INSTANCE=virgo4-dashboard
 
 CID=$(docker ps -f name=$INSTANCE|tail -1|awk '{print $1}')
 if [ -n "$CID" ]; then
