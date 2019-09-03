@@ -1,2 +1,2 @@
-export RAILS_ENV=development
+export RAILS_ENV=production
 scripts/entry.sh

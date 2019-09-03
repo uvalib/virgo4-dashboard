@@ -1,0 +1,31 @@
+<% content_for :title do %><%= "Virgo4 Pools (#{ENV[ 'TITLE_PREFIX' ]})" %><% end %>
+<div class="gridster">
+   <center><div style="font-size: 22px"><a href="/virgo4-main" class="pull-left">&nbsp;previous</a><%= "Virgo4 Pools (#{ENV[ 'TITLE_PREFIX' ]})" %><a href="/virgo4-main" class="pull-right">next&nbsp;</a></div></center>
+
+  <ul>
+
+     <% services = [ 'EDS_ARTICLES_POOL_SERVICE',
+                     'SOLR_CATALOG_POOL_SERVICE',
+                     'SOLR_CATALOG_BROAD_POOL_SERVICE',
+                     'SOLR_SERIALS_POOL_SERVICE',
+                     'SOLR_MUSIC_RECORDINGS_POOL_SERVICE',
+                     'SOLR_SOUND_RECORDINGS_POOL_SERVICE',
+                     'SOLR_VIDEO_POOL_SERVICE',
+                     'SOLR_MUSICAL_SCORES_POOL_SERVICE',
+                     'SOLR_ARCHIVAL_POOL_SERVICE' ] %>
+     <% services.each do |key| %>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+           <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Statusbox" data-title="<%= "#{CONFIG[key]['title']}" %>" data-text="Down"></div>
+        </li>
+
+     <% end %>
+
+    <% 3.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+  </ul>
+</div>

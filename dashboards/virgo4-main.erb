@@ -1,6 +1,6 @@
-<% content_for :title do %><%= "Virgo4 #{ENV[ 'TITLE_PREFIX' ]} Dashboard" %><% end %>
+<% content_for :title do %><%= "Virgo4 Main (#{ENV[ 'TITLE_PREFIX' ]} )" %><% end %>
 <div class="gridster">
-   <center><div style="font-size: 22px"><%= "Virgo4 #{ENV[ 'TITLE_PREFIX' ]} Dashboard" %></div></center>
+   <center><div style="font-size: 22px"><a href="/virgo4-pools" class="pull-left">&nbsp;previous</a><%= "Virgo4 Main (#{ENV[ 'TITLE_PREFIX' ]})" %><a href="/virgo4-pools" class="pull-right">next&nbsp;</a></div></center>
 
   <ul>
 
@@ -13,14 +13,7 @@
 
      <% end %>
 
-    <% 5.times do || %>
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
-      </li>
-    <% end %>
-
      <% services = [ 'CLIENT_SERVICE',
-                     'POOL_SERVICE',
                      'SEARCH_SERVICE',
                      'SOLR_MASTER',
                      'SOLR_REPLICA_0',
@@ -33,5 +26,11 @@
 
      <% end %>
 
-   </ul>
+    <% 6.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+  </ul>
 </div>
