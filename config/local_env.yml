@@ -81,6 +81,69 @@ SOLR_ARCHIVAL_POOL_SERVICE:
   url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
   id: 'solr-archival-pool-service'
 
+INGEST_GENERAL:
+  last_n_minutes: '10'
+
+INGEST_MARC_CONVERT_QUEUE_IN:
+  title: 'MARC conv'
+  count: 'marc-convert-in-count'
+  queue: 'virgo4-ingest-sirsi-marc-convert-staging'
+  metric: 'NumberOfMessagesSent'
+
+INGEST_MARC_CONVERT_QUEUE_OUT:
+  title: ''
+  count: 'marc-convert-out-count'
+  queue: 'virgo4-ingest-sirsi-marc-convert-staging'
+  metric: 'NumberOfMessagesDeleted'
+
+INGEST_TRACKSYS_ENRICH_QUEUE_IN:
+  title: 'TrackSys'
+  count: 'tracksys-enrich-in-count'
+  queue: 'virgo4-ingest-sirsi-tracksys-enrich-staging'
+  metric: 'NumberOfMessagesSent'
+
+INGEST_TRACKSYS_ENRICH_QUEUE_OUT:
+  title: ''
+  count: 'tracksys-enrich-out-count'
+  queue: 'virgo4-ingest-sirsi-tracksys-enrich-staging'
+  metric: 'NumberOfMessagesDeleted'
+
+INGEST_SOLR_UPDATE_QUEUE_IN:
+  title: 'SOLR add'
+  count: 'solr-update-in-count'
+  queue: 'virgo4-ingest-solr-update-staging'
+  metric: 'NumberOfMessagesSent'
+
+INGEST_SOLR_UPDATE_QUEUE_OUT:
+  title: ''
+  count: 'solr-update-out-count'
+  queue: 'virgo4-ingest-solr-update-staging'
+  metric: 'NumberOfMessagesDeleted'
+
+INGEST_SOLR_DELETE_QUEUE_IN:
+  title: 'SOLR del'
+  count: 'solr-delete-in-count'
+  queue: 'virgo4-ingest-solr-delete-staging'
+  metric: 'NumberOfMessagesSent'
+
+INGEST_SOLR_DELETE_QUEUE_OUT:
+  title: ''
+  count: 'solr-delete-out-count'
+  queue: 'virgo4-ingest-solr-delete-staging'
+  metric: 'NumberOfMessagesDeleted'
+
+INGEST_CACHE_QUEUE_IN:
+  title: 'Cache'
+  count: 'cache-in-count'
+  queue: 'virgo4-ingest-cache-staging'
+  metric: 'NumberOfMessagesSent'
+
+INGEST_CACHE_QUEUE_OUT:
+  title: ''
+  count: 'cache-out-count'
+  queue: 'virgo4-ingest-cache-staging'
+  metric: 'NumberOfMessagesDeleted'
+
 #
 # end of file
 #

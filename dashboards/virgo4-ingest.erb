@@ -1,0 +1,46 @@
+<% content_for :title do %><%= "Virgo4 Ingest (#{ENV[ 'TITLE_PREFIX' ]} )" %><% end %>
+<div class="gridster">
+   <center><div style="font-size: 22px"><a href="/virgo4-pools" class="pull-left">&nbsp;previous</a><%= "Virgo4 Ingest (#{ENV[ 'TITLE_PREFIX' ]})" %><a href="/virgo4-main" class="pull-right">next&nbsp;</a></div></center>
+
+  <ul>
+
+    <% services = [ 'INGEST_MARC_CONVERT_QUEUE_IN',
+                    'INGEST_TRACKSYS_ENRICH_QUEUE_IN',
+                    'INGEST_SOLR_UPDATE_QUEUE_IN',
+                    'INGEST_SOLR_DELETE_QUEUE_IN',
+                    'INGEST_CACHE_QUEUE_IN' ] %>
+     <% services.each do |key| %>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+           <div data-id="<%= "#{CONFIG[key]['count']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
+        </li>
+
+     <% end %>
+
+    <% 1.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+    <% services = [ 'INGEST_MARC_CONVERT_QUEUE_OUT',
+                    'INGEST_TRACKSYS_ENRICH_QUEUE_OUT',
+                    'INGEST_SOLR_UPDATE_QUEUE_OUT',
+                    'INGEST_SOLR_DELETE_QUEUE_OUT',
+                    'INGEST_CACHE_QUEUE_OUT' ] %>
+    <% services.each do |key| %>
+
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="<%= "#{CONFIG[key]['count']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
+      </li>
+
+    <% end %>
+
+    <% 1.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+  </ul>
+</div>
