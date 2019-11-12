@@ -84,16 +84,28 @@ SOLR_ARCHIVAL_POOL_SERVICE:
 INGEST_GENERAL:
   last_n_minutes: '10'
 
-INGEST_MARC_CONVERT_QUEUE_IN:
-  title: 'MARC conv'
-  count: 'marc-convert-in-count'
+INGEST_SIRSI_MARC_CONVERT_QUEUE_IN:
+  title: 'Sirsi MARC'
+  count: 'sirsi-marc-convert-in-count'
   queue: 'virgo4-ingest-sirsi-marc-convert-staging'
   metric: 'NumberOfMessagesSent'
 
-INGEST_MARC_CONVERT_QUEUE_OUT:
+INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
   title: ''
-  count: 'marc-convert-out-count'
+  count: 'sirsi-marc-convert-out-count'
   queue: 'virgo4-ingest-sirsi-marc-convert-staging'
+  metric: 'NumberOfMessagesDeleted'
+
+INGEST_HATHI_MARC_CONVERT_QUEUE_IN:
+  title: 'Hathi MARC'
+  count: 'hathi-marc-convert-in-count'
+  queue: 'virgo4-ingest-hathi-marc-convert-staging'
+  metric: 'NumberOfMessagesSent'
+
+INGEST_HATHI_MARC_CONVERT_QUEUE_OUT:
+  title: ''
+  count: 'hathi-marc-convert-out-count'
+  queue: 'virgo4-ingest-hathi-marc-convert-staging'
   metric: 'NumberOfMessagesDeleted'
 
 INGEST_TRACKSYS_ENRICH_QUEUE_IN:

@@ -3,7 +3,7 @@ require 'aws-sdk-cloudwatch'
 
 class Processor
 
-  @@aws_cw_client = Aws::CloudWatch::Client.new(region: "#{ENV['AWS_DEFAULT_REGION']}" )
+  @@aws_cw_client = Aws::CloudWatch::Client.new(region: "#{ENV['AWS_REGION']}" )
 
   def self.http_status_check( service_url, service_name, data_sink )
 

@@ -4,7 +4,8 @@
 
   <ul>
 
-    <% services = [ 'INGEST_MARC_CONVERT_QUEUE_IN',
+    <% services = [ 'INGEST_SIRSI_MARC_CONVERT_QUEUE_IN',
+                    'INGEST_HATHI_MARC_CONVERT_QUEUE_IN',
                     'INGEST_TRACKSYS_ENRICH_QUEUE_IN',
                     'INGEST_SOLR_UPDATE_QUEUE_IN',
                     'INGEST_SOLR_DELETE_QUEUE_IN',
@@ -17,13 +18,8 @@
 
      <% end %>
 
-    <% 1.times do || %>
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
-      </li>
-    <% end %>
-
-    <% services = [ 'INGEST_MARC_CONVERT_QUEUE_OUT',
+    <% services = [ 'INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT',
+                    'INGEST_HATHI_MARC_CONVERT_QUEUE_OUT',
                     'INGEST_TRACKSYS_ENRICH_QUEUE_OUT',
                     'INGEST_SOLR_UPDATE_QUEUE_OUT',
                     'INGEST_SOLR_DELETE_QUEUE_OUT',
@@ -34,12 +30,6 @@
         <div data-id="<%= "#{CONFIG[key]['count']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
       </li>
 
-    <% end %>
-
-    <% 1.times do || %>
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
-      </li>
     <% end %>
 
   </ul>
