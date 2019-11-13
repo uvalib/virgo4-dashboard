@@ -82,7 +82,7 @@ SOLR_ARCHIVAL_POOL_SERVICE:
   id: 'solr-archival-pool-service'
 
 INGEST_GENERAL:
-  last_n_minutes: '10'
+  last_n_minutes: '15'
 
 INGEST_SIRSI_MARC_CONVERT_QUEUE_IN:
   title: 'Sirsi MARC'
