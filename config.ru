@@ -3,8 +3,7 @@ require 'dashing'
 configure do
 
   ENV['RAILS_ENV'] ||= 'development'
-
-  ENV[ 'TITLE_PREFIX' ] ||= 'Development'
+  ENV['ENVIRONMENT'] ||= 'development'
 
   #
   # load environment variables from config/local_env.yml if it exists
