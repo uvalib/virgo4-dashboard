@@ -5,8 +5,8 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   service_url = config['url']
   service_title = config['title']
-  data_sink_response = config['time']
+  data_sink = config['id']
 
-  Processor.http_response_check( service_url, service_title, max_response_time, data_sink_response )
+  Processor.http_response_check( service_url, service_title, max_response_time, data_sink )
 
 end

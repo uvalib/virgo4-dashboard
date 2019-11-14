@@ -8,7 +8,7 @@
      <% services.each do |key| %>
 
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-           <div data-id="<%= "#{CONFIG[key]['time']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="1000" data-moreinfo="Response time in mS"></div>
+           <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="1000" data-moreinfo="Response time in mS"></div>
         </li>
 
      <% end %>

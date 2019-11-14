@@ -13,7 +13,7 @@
      <% services.each do |key| %>
 
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-           <div data-id="<%= "#{CONFIG[key]['count']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
+           <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
         </li>
 
      <% end %>
@@ -27,7 +27,7 @@
     <% services.each do |key| %>
 
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        <div data-id="<%= "#{CONFIG[key]['count']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
+        <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" data-moreinfo="<%= "last #{CONFIG['INGEST_GENERAL']['last_n_minutes']} minutes" %>"></div>
       </li>
 
     <% end %>

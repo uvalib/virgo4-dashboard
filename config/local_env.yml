@@ -9,7 +9,7 @@
 CLIENT_LANDING:
  title: 'Client'
  url: <%= "#{ENV['CLIENT_SERVICE']}/" %>
- time: 'client-landing-time'
+ id: 'client-landing-time'
 
 CLIENT_SERVICE:
  title: 'Client'
@@ -37,125 +37,125 @@ SOLR_REPLICA_1:
  id: 'solr-replica-1'
 
 EDS_ARTICLES_POOL_SERVICE:
-  title: 'EDS Articles'
-  url: <%= "#{ENV['EDS_ARTICLES_POOL_SERVICE']}/healthcheck" %>
-  id: 'eds-articles-pool-service'
+ title: 'EDS Articles'
+ url: <%= "#{ENV['EDS_ARTICLES_POOL_SERVICE']}/healthcheck" %>
+ id: 'eds-articles-pool-service'
 
 SOLR_CATALOG_POOL_SERVICE:
-  title: 'SOLR Catalog'
-  url: <%= "#{ENV['SOLR_CATALOG_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-catalog-pool-service'
+ title: 'SOLR Catalog'
+ url: <%= "#{ENV['SOLR_CATALOG_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-catalog-pool-service'
 
 SOLR_CATALOG_BROAD_POOL_SERVICE:
-  title: 'SOLR Catalog Broad'
-  url: <%= "#{ENV['SOLR_CATALOG_BROAD_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-catalog-broad-pool-service'
+ title: 'SOLR Catalog Broad'
+ url: <%= "#{ENV['SOLR_CATALOG_BROAD_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-catalog-broad-pool-service'
 
 SOLR_SERIALS_POOL_SERVICE:
-  title: 'SOLR Serials'
-  url: <%= "#{ENV['SOLR_SERIALS_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-serials-pool-service'
+ title: 'SOLR Serials'
+ url: <%= "#{ENV['SOLR_SERIALS_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-serials-pool-service'
 
 SOLR_MUSIC_RECORDINGS_POOL_SERVICE:
-  title: 'SOLR Music Recordings'
-  url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-music-rec-pool-service'
+ title: 'SOLR Music Recordings'
+ url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-music-rec-pool-service'
 
 SOLR_SOUND_RECORDINGS_POOL_SERVICE:
-  title: 'SOLR Sound Recordings'
-  url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-sound-rec-pool-service'
+ title: 'SOLR Sound Recordings'
+ url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-sound-rec-pool-service'
 
 SOLR_VIDEO_POOL_SERVICE:
-  title: 'SOLR Video'
-  url: <%= "#{ENV['SOLR_VIDEO_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-video-pool-service'
+ title: 'SOLR Video'
+ url: <%= "#{ENV['SOLR_VIDEO_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-video-pool-service'
 
 SOLR_MUSICAL_SCORES_POOL_SERVICE:
-  title: 'SOLR Musical Scores'
-  url: <%= "#{ENV['SOLR_MUSICAL_SCORES_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-musical-score-pool-service'
+ title: 'SOLR Musical Scores'
+ url: <%= "#{ENV['SOLR_MUSICAL_SCORES_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-musical-score-pool-service'
 
 SOLR_ARCHIVAL_POOL_SERVICE:
-  title: 'SOLR Archival'
-  url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-archival-pool-service'
+ title: 'SOLR Archival'
+ url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-archival-pool-service'
 
 INGEST_GENERAL:
-  last_n_minutes: '15'
-  last_n_hours: '24'
+ last_n_minutes: '15'
+ last_n_hours: '24'
 
 INGEST_SIRSI_MARC_CONVERT_QUEUE_IN:
-  title: 'Sirsi MARC'
-  count: 'sirsi-marc-convert-in-count'
-  queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
+ title: 'Sirsi MARC'
+ queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'sirsi-marc-convert-in-count'
 
 INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
-  title: ''
-  count: 'sirsi-marc-convert-out-count'
-  queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
+ title: ''
+ queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'sirsi-marc-convert-out-count'
 
 INGEST_HATHI_MARC_CONVERT_QUEUE_IN:
-  title: 'Hathi MARC'
-  count: 'hathi-marc-convert-in-count'
-  queue: <%= "virgo4-ingest-hathi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
+ title: 'Hathi MARC'
+ queue: <%= "virgo4-ingest-hathi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'hathi-marc-convert-in-count'
 
 INGEST_HATHI_MARC_CONVERT_QUEUE_OUT:
-  title: ''
-  count: 'hathi-marc-convert-out-count'
-  queue: <%= "virgo4-ingest-hathi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
+ title: ''
+ queue: <%= "virgo4-ingest-hathi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'hathi-marc-convert-out-count'
 
 INGEST_TRACKSYS_ENRICH_QUEUE_IN:
-  title: 'TrackSys'
-  count: 'tracksys-enrich-in-count'
-  queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
+ title: 'TrackSys'
+ queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'tracksys-enrich-in-count'
 
 INGEST_TRACKSYS_ENRICH_QUEUE_OUT:
-  title: ''
-  count: 'tracksys-enrich-out-count'
-  queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
+ title: ''
+ queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'tracksys-enrich-out-count'
 
 INGEST_SOLR_UPDATE_QUEUE_IN:
-  title: 'SOLR add'
-  count: 'solr-update-in-count'
-  queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
+ title: 'SOLR add'
+ queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'solr-update-in-count'
 
 INGEST_SOLR_UPDATE_QUEUE_OUT:
-  title: ''
-  count: 'solr-update-out-count'
-  queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
+ title: ''
+ queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'solr-update-out-count'
 
 INGEST_SOLR_DELETE_QUEUE_IN:
-  title: 'SOLR del'
-  count: 'solr-delete-in-count'
-  queue: <%= "virgo4-ingest-solr-delete-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
+ title: 'SOLR del'
+ queue: <%= "virgo4-ingest-solr-delete-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'solr-delete-in-count'
 
 INGEST_SOLR_DELETE_QUEUE_OUT:
-  title: ''
-  count: 'solr-delete-out-count'
-  queue: <%= "virgo4-ingest-solr-delete-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
+ title: ''
+ queue: <%= "virgo4-ingest-solr-delete-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'solr-delete-out-count'
 
 INGEST_CACHE_QUEUE_IN:
-  title: 'Cache'
-  count: 'cache-in-count'
-  queue: <%= "virgo4-ingest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
+ title: 'Cache'
+ queue: <%= "virgo4-ingest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'cache-in-count'
 
 INGEST_CACHE_QUEUE_OUT:
-  title: ''
-  count: 'cache-out-count'
-  queue: <%= "virgo4-ingest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
+ title: ''
+ queue: <%= "virgo4-ingest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'cache-out-count'
 
 #
 # end of file

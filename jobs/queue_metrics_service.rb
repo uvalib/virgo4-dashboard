@@ -4,7 +4,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -13,7 +13,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -22,7 +22,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -31,7 +31,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -40,7 +40,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -50,7 +50,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -60,7 +60,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -70,7 +70,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -79,7 +79,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -89,7 +89,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -98,7 +98,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
@@ -108,7 +108,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
 
   queue_name = config['queue']
   metric_name = config['metric']
-  data_sink = config['count']
+  data_sink = config['id']
   last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
 
   Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
