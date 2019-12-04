@@ -4,11 +4,11 @@
 
   <ul>
 
-    <% services = [ 'INGEST_SIRSI_MARC_CONVERT_QUEUE_IN',
+    <% services = [ 'INGEST_DYNAMIC_MARC_CONVERT_QUEUE_IN',
                     'INGEST_HATHI_MARC_CONVERT_QUEUE_IN',
+                    'INGEST_SIRSI_MARC_CONVERT_QUEUE_IN',
                     'INGEST_TRACKSYS_ENRICH_QUEUE_IN',
                     'INGEST_SOLR_UPDATE_QUEUE_IN',
-                    'INGEST_SOLR_DELETE_QUEUE_IN',
                     'INGEST_CACHE_QUEUE_IN' ] %>
      <% services.each do |key| %>
 
@@ -18,11 +18,11 @@
 
      <% end %>
 
-    <% services = [ 'INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT',
+    <% services = [ 'INGEST_DYNAMIC_MARC_CONVERT_QUEUE_OUT',
                     'INGEST_HATHI_MARC_CONVERT_QUEUE_OUT',
+                    'INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT',
                     'INGEST_TRACKSYS_ENRICH_QUEUE_OUT',
                     'INGEST_SOLR_UPDATE_QUEUE_OUT',
-                    'INGEST_SOLR_DELETE_QUEUE_OUT',
                     'INGEST_CACHE_QUEUE_OUT' ] %>
     <% services.each do |key| %>
 

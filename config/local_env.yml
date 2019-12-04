@@ -85,20 +85,20 @@ INGEST_GENERAL:
  last_n_minutes: '15'
  last_n_hours: '24'
 
-INGEST_SIRSI_MARC_CONVERT_QUEUE_IN:
- title: 'Sirsi MARC'
- queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
- metric: 'NumberOfMessagesSent'
- id: 'sirsi-marc-convert-in-count'
+INGEST_DYNAMIC_MARC_CONVERT_QUEUE_IN:
+  title: 'Dynmc MRC'
+  queue: <%= "virgo4-ingest-dynamic-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesSent'
+  id: 'dynamic-marc-convert-in-count'
 
-INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
- title: ''
- queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
- metric: 'NumberOfMessagesDeleted'
- id: 'sirsi-marc-convert-out-count'
+INGEST_DYNAMIC_MARC_CONVERT_QUEUE_OUT:
+  title: ''
+  queue: <%= "virgo4-ingest-dynamic-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesDeleted'
+  id: 'dynamic-marc-convert-out-count'
 
 INGEST_HATHI_MARC_CONVERT_QUEUE_IN:
- title: 'Hathi MARC'
+ title: 'Hathi MRC'
  queue: <%= "virgo4-ingest-hathi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesSent'
  id: 'hathi-marc-convert-in-count'
@@ -108,6 +108,18 @@ INGEST_HATHI_MARC_CONVERT_QUEUE_OUT:
  queue: <%= "virgo4-ingest-hathi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesDeleted'
  id: 'hathi-marc-convert-out-count'
+
+INGEST_SIRSI_MARC_CONVERT_QUEUE_IN:
+  title: 'Sirsi MRC'
+  queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesSent'
+  id: 'sirsi-marc-convert-in-count'
+
+INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
+  title: ''
+  queue: <%= "virgo4-ingest-sirsi-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesDeleted'
+  id: 'sirsi-marc-convert-out-count'
 
 INGEST_TRACKSYS_ENRICH_QUEUE_IN:
  title: 'TrackSys'
@@ -132,18 +144,6 @@ INGEST_SOLR_UPDATE_QUEUE_OUT:
  queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesDeleted'
  id: 'solr-update-out-count'
-
-INGEST_SOLR_DELETE_QUEUE_IN:
- title: 'SOLR del'
- queue: <%= "virgo4-ingest-solr-delete-#{ENV[ 'ENVIRONMENT' ]}" %>
- metric: 'NumberOfMessagesSent'
- id: 'solr-delete-in-count'
-
-INGEST_SOLR_DELETE_QUEUE_OUT:
- title: ''
- queue: <%= "virgo4-ingest-solr-delete-#{ENV[ 'ENVIRONMENT' ]}" %>
- metric: 'NumberOfMessagesDeleted'
- id: 'solr-delete-out-count'
 
 INGEST_CACHE_QUEUE_IN:
  title: 'Cache'
