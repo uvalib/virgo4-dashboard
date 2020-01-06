@@ -41,6 +41,11 @@ EDS_ARTICLES_POOL_SERVICE:
  url: <%= "#{ENV['EDS_ARTICLES_POOL_SERVICE']}/healthcheck" %>
  id: 'eds-articles-pool-service'
 
+SOLR_ARCHIVAL_POOL_SERVICE:
+  title: 'SOLR Archival'
+  url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
+  id: 'solr-archival-pool-service'
+
 SOLR_CATALOG_POOL_SERVICE:
  title: 'SOLR Catalog'
  url: <%= "#{ENV['SOLR_CATALOG_POOL_SERVICE']}/healthcheck" %>
@@ -51,15 +56,25 @@ SOLR_CATALOG_BROAD_POOL_SERVICE:
  url: <%= "#{ENV['SOLR_CATALOG_BROAD_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-catalog-broad-pool-service'
 
-SOLR_SERIALS_POOL_SERVICE:
- title: 'SOLR Serials'
- url: <%= "#{ENV['SOLR_SERIALS_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-serials-pool-service'
-
 SOLR_MUSIC_RECORDINGS_POOL_SERVICE:
  title: 'SOLR Music Recordings'
  url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-music-rec-pool-service'
+
+SOLR_MUSICAL_SCORES_POOL_SERVICE:
+  title: 'SOLR Musical Scores'
+  url: <%= "#{ENV['SOLR_MUSICAL_SCORES_POOL_SERVICE']}/healthcheck" %>
+  id: 'solr-musical-score-pool-service'
+
+SOLR_RAREBOOKS_POOL_SERVICE:
+  title: 'SOLR Rare Books'
+  url: <%= "#{ENV['SOLR_RAREBOOKS_POOL_SERVICE']}/healthcheck" %>
+  id: 'solr-rarebooks-pool-service'
+
+SOLR_SERIALS_POOL_SERVICE:
+  title: 'SOLR Serials'
+  url: <%= "#{ENV['SOLR_SERIALS_POOL_SERVICE']}/healthcheck" %>
+  id: 'solr-serials-pool-service'
 
 SOLR_SOUND_RECORDINGS_POOL_SERVICE:
  title: 'SOLR Sound Recordings'
@@ -70,16 +85,6 @@ SOLR_VIDEO_POOL_SERVICE:
  title: 'SOLR Video'
  url: <%= "#{ENV['SOLR_VIDEO_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-video-pool-service'
-
-SOLR_MUSICAL_SCORES_POOL_SERVICE:
- title: 'SOLR Musical Scores'
- url: <%= "#{ENV['SOLR_MUSICAL_SCORES_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-musical-score-pool-service'
-
-SOLR_ARCHIVAL_POOL_SERVICE:
- title: 'SOLR Archival'
- url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-archival-pool-service'
 
 INGEST_GENERAL:
  last_n_minutes: '15'
