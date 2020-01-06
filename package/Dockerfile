@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
 # update the packages
 RUN apk update && apk upgrade && apk add bash tzdata ruby ruby-dev openssl-dev build-base nodejs ca-certificates
@@ -11,7 +11,7 @@ ENV TZ=EST5EDT
 RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # install necessary gems
-RUN gem install bundler -v 1.17.3 --no-ri --no-rdoc && gem install io-console --no-ri --no-rdoc
+RUN gem install bundler -v 1.17.3 --no-document && gem install io-console --no-document
 
 # Specify home 
 ENV APP_HOME /statusdash
