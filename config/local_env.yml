@@ -46,6 +46,11 @@ EDS_ARTICLES_POOL_SERVICE:
  url: <%= "#{ENV['EDS_ARTICLES_POOL_SERVICE']}/healthcheck" %>
  id: 'eds-articles-pool-service'
 
+JMRL_POOL_SERVICE:
+  title: 'JMRL'
+  url: <%= "#{ENV['JMRL_POOL_SERVICE']}/healthcheck" %>
+  id: 'jmrl-pool-service'
+
 SOLR_ARCHIVAL_POOL_SERVICE:
   title: 'SOLR Archival'
   url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
