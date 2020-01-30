@@ -86,6 +86,11 @@ SOLR_SOUND_RECORDINGS_POOL_SERVICE:
  url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-sound-rec-pool-service'
 
+SOLR_THESIS_POOL_SERVICE:
+  title: 'SOLR Thesis'
+  url: <%= "#{ENV['SOLR_THESIS_POOL_SERVICE']}/healthcheck" %>
+  id: 'solr-thesis-pool-service'
+
 SOLR_VIDEO_POOL_SERVICE:
  title: 'SOLR Video'
  url: <%= "#{ENV['SOLR_VIDEO_POOL_SERVICE']}/healthcheck" %>
