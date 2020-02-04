@@ -26,6 +26,11 @@ ILS_SERVICE:
   url: <%= "#{ENV['ILS_SERVICE']}/healthcheck" %>
   id: 'ils-service'
 
+SUGGESTER_SERVICE:
+  title: 'Suggester'
+  url: <%= "#{ENV['SUGGESTER_SERVICE']}/healthcheck" %>
+  id: 'suggester-service'
+
 SOLR_MASTER:
  title: 'SOLR Master'
  url: <%= "#{ENV['SOLR_MASTER']}/solr/admin/info/system" %>
