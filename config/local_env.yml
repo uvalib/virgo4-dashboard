@@ -66,10 +66,10 @@ SOLR_CATALOG_POOL_SERVICE:
  url: <%= "#{ENV['SOLR_CATALOG_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-catalog-pool-service'
 
-SOLR_CATALOG_BROAD_POOL_SERVICE:
- title: 'SOLR Catalog Broad'
- url: <%= "#{ENV['SOLR_CATALOG_BROAD_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-catalog-broad-pool-service'
+SOLR_IMAGES_POOL_SERVICE:
+ title: 'SOLR Images'
+ url: <%= "#{ENV['SOLR_IMAGES_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-images-pool-service'
 
 SOLR_MUSIC_RECORDINGS_POOL_SERVICE:
  title: 'SOLR Music Recordings'
@@ -80,11 +80,6 @@ SOLR_MUSICAL_SCORES_POOL_SERVICE:
   title: 'SOLR Musical Scores'
   url: <%= "#{ENV['SOLR_MUSICAL_SCORES_POOL_SERVICE']}/healthcheck" %>
   id: 'solr-musical-score-pool-service'
-
-SOLR_RAREBOOKS_POOL_SERVICE:
-  title: 'SOLR Rare Books'
-  url: <%= "#{ENV['SOLR_RAREBOOKS_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-rarebooks-pool-service'
 
 SOLR_SERIALS_POOL_SERVICE:
   title: 'SOLR Serials'

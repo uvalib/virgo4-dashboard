@@ -28,7 +28,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
   data_sink = config['id']
   Processor.http_status_check( service_url, service_title, data_sink )
 
-  config = CONFIG[ 'SOLR_CATALOG_BROAD_POOL_SERVICE' ]
+  config = CONFIG[ 'SOLR_IMAGES_POOL_SERVICE' ]
 
   service_url = config['url']
   service_title = config['title']
@@ -43,13 +43,6 @@ SCHEDULER.every '60s', allow_overlapping: false do
   Processor.http_status_check( service_url, service_title, data_sink )
 
   config = CONFIG[ 'SOLR_MUSICAL_SCORES_POOL_SERVICE' ]
-
-  service_url = config['url']
-  service_title = config['title']
-  data_sink = config['id']
-  Processor.http_status_check( service_url, service_title, data_sink )
-
-  config = CONFIG[ 'SOLR_RAREBOOKS_POOL_SERVICE' ]
 
   service_url = config['url']
   service_title = config['title']

@@ -8,10 +8,9 @@
                      'JMRL_POOL_SERVICE',
                      'SOLR_ARCHIVAL_POOL_SERVICE',
                      'SOLR_CATALOG_POOL_SERVICE',
-                     'SOLR_CATALOG_BROAD_POOL_SERVICE',
+                     'SOLR_IMAGES_POOL_SERVICE',
                      'SOLR_MUSIC_RECORDINGS_POOL_SERVICE',
                      'SOLR_MUSICAL_SCORES_POOL_SERVICE',
-                     'SOLR_RAREBOOKS_POOL_SERVICE',
                      'SOLR_SERIALS_POOL_SERVICE',
                      'SOLR_SOUND_RECORDINGS_POOL_SERVICE',
                      'SOLR_THESIS_POOL_SERVICE',
@@ -23,6 +22,12 @@
         </li>
 
      <% end %>
+
+    <% 1.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
 
   </ul>
 </div>
