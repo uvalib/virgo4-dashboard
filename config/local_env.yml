@@ -101,6 +101,11 @@ SOLR_VIDEO_POOL_SERVICE:
  url: <%= "#{ENV['SOLR_VIDEO_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-video-pool-service'
 
+WORLDCAT_POOL_SERVICE:
+  title: 'WorldCat'
+  url: <%= "#{ENV['WORLDCAT_POOL_SERVICE']}/healthcheck" %>
+  id: 'worldcat-pool-service'
+
 INGEST_GENERAL:
  last_n_minutes: '15'
  last_n_hours: '24'
