@@ -90,6 +90,7 @@ DEPENDENCIES
   etc
   httparty
   json
+  rack-protection (>= 1.5.5)
   redis
 
 BUNDLED WITH
