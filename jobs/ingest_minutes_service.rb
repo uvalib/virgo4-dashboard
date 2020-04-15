@@ -1,111 +1,36 @@
 SCHEDULER.every '60s', allow_overlapping: false do
 
-  config = CONFIG['INGEST_DYNAMIC_MARC_CONVERT_QUEUE_IN']
+  queue_configs = [ 'INGEST_DYNAMIC_MARC_CONVERT_QUEUE',
+                    'INGEST_HATHI_MARC_CONVERT_QUEUE',
+                    'INGEST_SIRSI_MARC_CONVERT_QUEUE',
+                    'INGEST_TRACKSYS_ENRICH_QUEUE',
+                    'INGEST_DEFAULT_SOLR_UPDATE_QUEUE',
+                    'INGEST_IMAGE_SOLR_UPDATE_QUEUE',
+                    'INGEST_IMAGE_DOC_QUEUE',
+                    'INGEST_IIIF_CACHE_QUEUE',
+                    'INGEST_CACHE_QUEUE' ]
+  queue_configs.each do |queue_config|
 
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
+    # inbound
+    config = CONFIG["#{queue_config}_IN"]
 
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
+    queue_name = config['queue']
+    metric_name = config['metric']
+    data_sink = "#{config['id']}-minute"
+    last_n_minutes = "#{CONFIG['INGEST_GENERAL']['last_n_minutes']}"
 
-  config = CONFIG['INGEST_DYNAMIC_MARC_CONVERT_QUEUE_OUT']
+    Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
 
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
+    # outbound
+    config = CONFIG["#{queue_config}_OUT"]
 
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
+    queue_name = config['queue']
+    metric_name = config['metric']
+    data_sink = "#{config['id']}-minute"
+    last_n_minutes = "#{CONFIG['INGEST_GENERAL']['last_n_minutes']}"
 
-  config = CONFIG['INGEST_HATHI_MARC_CONVERT_QUEUE_IN']
+    Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
 
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_HATHI_MARC_CONVERT_QUEUE_OUT']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_SIRSI_MARC_CONVERT_QUEUE_IN']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_TRACKSYS_ENRICH_QUEUE_IN']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_TRACKSYS_ENRICH_QUEUE_OUT']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_SOLR_UPDATE_QUEUE_IN']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_SOLR_UPDATE_QUEUE_OUT']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_CACHE_QUEUE_IN']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
-
-  config = CONFIG['INGEST_CACHE_QUEUE_OUT']
-
-  queue_name = config['queue']
-  metric_name = config['metric']
-  data_sink = "#{config['id']}-minute"
-  last_n_minutes = CONFIG['INGEST_GENERAL']['last_n_minutes']
-
-  Processor.aws_queue_metrics( queue_name, metric_name, last_n_minutes, data_sink )
+  end
 
 end

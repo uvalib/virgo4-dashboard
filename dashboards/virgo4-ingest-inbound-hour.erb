@@ -1,15 +1,13 @@
-<% content_for :title do %><%= "Virgo4 Ingest, previous #{CONFIG['INGEST_GENERAL']['last_n_hours']} hours (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
+<% content_for :title do %><%= "Virgo4 Inbound, previous #{CONFIG['INGEST_GENERAL']['last_n_hours']} hours (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
 <div class="gridster">
-   <center><div style="font-size: 22px"><a href="/virgo4-ingest-minute" class="pull-left">&nbsp;previous</a><%= "Virgo4 Ingest, previous #{CONFIG['INGEST_GENERAL']['last_n_hours']} hours (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-main" class="pull-right">next&nbsp;</a></div></center>
+   <center><div style="font-size: 22px"><a href="/virgo4-ingest-inbound-minute" class="pull-left">&nbsp;previous</a><%= "Virgo4 Inbound, previous #{CONFIG['INGEST_GENERAL']['last_n_hours']} hours (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-ingest-pipeline-minute" class="pull-right">next&nbsp;</a></div></center>
 
   <ul>
 
     <% services = [ 'INGEST_DYNAMIC_MARC_CONVERT_QUEUE_IN',
                     'INGEST_HATHI_MARC_CONVERT_QUEUE_IN',
                     'INGEST_SIRSI_MARC_CONVERT_QUEUE_IN',
-                    'INGEST_TRACKSYS_ENRICH_QUEUE_IN',
-                    'INGEST_SOLR_UPDATE_QUEUE_IN',
-                    'INGEST_CACHE_QUEUE_IN' ] %>
+                    'INGEST_IMAGE_DOC_QUEUE_IN'] %>
      <% services.each do |key| %>
 
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
@@ -18,18 +16,28 @@
 
      <% end %>
 
+    <% 2.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
     <% services = [ 'INGEST_DYNAMIC_MARC_CONVERT_QUEUE_OUT',
                     'INGEST_HATHI_MARC_CONVERT_QUEUE_OUT',
                     'INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT',
-                    'INGEST_TRACKSYS_ENRICH_QUEUE_OUT',
-                    'INGEST_SOLR_UPDATE_QUEUE_OUT',
-                    'INGEST_CACHE_QUEUE_OUT' ] %>
+                    'INGEST_IMAGE_DOC_QUEUE_OUT'] %>
     <% services.each do |key| %>
 
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
         <div data-id="<%= "#{CONFIG[key]['id']}-hour" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="2000000" %></div>
       </li>
 
+    <% end %>
+
+    <% 2.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
     <% end %>
 
   </ul>

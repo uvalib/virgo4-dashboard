@@ -110,6 +110,10 @@ INGEST_GENERAL:
  last_n_minutes: '15'
  last_n_hours: '24'
 
+#
+# inbound queues
+#
+
 INGEST_DYNAMIC_MARC_CONVERT_QUEUE_IN:
   title: 'Dynmc MRC'
   queue: <%= "virgo4-ingest-dynamic-marc-convert-#{ENV[ 'ENVIRONMENT' ]}" %>
@@ -146,6 +150,22 @@ INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
   metric: 'NumberOfMessagesDeleted'
   id: 'sirsi-marc-convert-out-count'
 
+#
+# pipeline queues
+#
+
+INGEST_IIIF_CACHE_QUEUE_IN:
+  title: 'IIF Cache'
+  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesSent'
+  id: 'iiif-cache-in-count'
+
+INGEST_IIIF_CACHE_QUEUE_OUT:
+  title: ''
+  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesDeleted'
+  id: 'iiif-cache-out-count'
+
 INGEST_TRACKSYS_ENRICH_QUEUE_IN:
  title: 'TrackSys'
  queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
@@ -158,17 +178,29 @@ INGEST_TRACKSYS_ENRICH_QUEUE_OUT:
  metric: 'NumberOfMessagesDeleted'
  id: 'tracksys-enrich-out-count'
 
-INGEST_SOLR_UPDATE_QUEUE_IN:
- title: 'SOLR add'
- queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
+INGEST_DEFAULT_SOLR_UPDATE_QUEUE_IN:
+ title: 'Def SOLR'
+ queue: <%= "virgo4-ingest-default-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesSent'
- id: 'solr-update-in-count'
+ id: 'default-solr-update-in-count'
 
-INGEST_SOLR_UPDATE_QUEUE_OUT:
+INGEST_DEFAULT_SOLR_UPDATE_QUEUE_OUT:
  title: ''
- queue: <%= "virgo4-ingest-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
+ queue: <%= "virgo4-ingest-default-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesDeleted'
- id: 'solr-update-out-count'
+ id: 'default-solr-update-out-count'
+
+INGEST_IMAGE_SOLR_UPDATE_QUEUE_IN:
+  title: 'Img SOLR'
+  queue: <%= "virgo4-ingest-image-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesSent'
+  id: 'image-solr-update-in-count'
+
+INGEST_IMAGE_SOLR_UPDATE_QUEUE_OUT:
+  title: ''
+  queue: <%= "virgo4-ingest-image-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesDeleted'
+  id: 'image-solr-update-out-count'
 
 INGEST_CACHE_QUEUE_IN:
  title: 'Cache'
@@ -181,6 +213,18 @@ INGEST_CACHE_QUEUE_OUT:
  queue: <%= "virgo4-ingest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesDeleted'
  id: 'cache-out-count'
+
+INGEST_IMAGE_DOC_QUEUE_IN:
+  title: 'Image Doc'
+  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesSent'
+  id: 'image-doc-in-count'
+
+INGEST_IMAGE_DOC_QUEUE_OUT:
+  title: ''
+  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+  metric: 'NumberOfMessagesDeleted'
+  id: 'image-doc-out-count'
 
 #
 # end of file
