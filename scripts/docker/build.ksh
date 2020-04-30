@@ -1,11 +1,11 @@
-if [ -z "$DOCKER_HOST" ]; then
-   echo "ERROR: no DOCKER_HOST defined"
-   exit 1
-fi
+#if [ -z "$DOCKER_HOST" ]; then
+#   echo "ERROR: no DOCKER_HOST defined"
+#   exit 1
+#fi
 
-echo "*****************************************"
-echo "building on $DOCKER_HOST"
-echo "*****************************************"
+#echo "*****************************************"
+#echo "building on $DOCKER_HOST"
+#echo "*****************************************"
 
 # set the definitions
 INSTANCE=virgo4-dashboard

@@ -3,7 +3,7 @@
 #
 
 #
-# the endpoints to inspect
+# response time endpoints
 #
 
 CLIENT_LANDING:
@@ -11,10 +11,19 @@ CLIENT_LANDING:
  url: <%= "#{ENV['CLIENT_SERVICE']}/" %>
  id: 'client-landing-time'
 
+#
+# healthcheck endpoints
+#
+
 CLIENT_SERVICE:
  title: 'Client'
  url: <%= "#{ENV['CLIENT_SERVICE']}/healthcheck" %>
  id: 'client-service'
+
+DIGITAL_CONTENT_SERVICE:
+  title: 'Digital Content'
+  url: <%= "#{ENV['DIGITAL_CONTENT_SERVICE']}/healthcheck" %>
+  id: 'digital-content-service'
 
 SEARCH_SERVICE:
  title: 'Search'
