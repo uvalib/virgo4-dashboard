@@ -25,6 +25,11 @@ DIGITAL_CONTENT_SERVICE:
   url: <%= "#{ENV['DIGITAL_CONTENT_SERVICE']}/healthcheck" %>
   id: 'digital-content-service'
 
+CITATIONS_SERVICE:
+  title: 'Citations'
+  url: <%= "#{ENV['CITATIONS_SERVICE']}/healthcheck" %>
+  id: 'citations-service'
+
 SEARCH_SERVICE:
  title: 'Search'
  url: <%= "#{ENV['SEARCH_SERVICE']}/healthcheck" %>
