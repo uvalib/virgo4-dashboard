@@ -5,6 +5,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
                'CITATIONS_SERVICE',
                'EDS_ARTICLES_POOL_SERVICE',
                'ILS_SERVICE',
+               'PDA_SERVICE',
                'JMRL_POOL_SERVICE',
                'SEARCH_SERVICE',
                'SOLR_MASTER',

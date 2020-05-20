@@ -20,25 +20,30 @@ CLIENT_SERVICE:
  url: <%= "#{ENV['CLIENT_SERVICE']}/healthcheck" %>
  id: 'client-service'
 
-DIGITAL_CONTENT_SERVICE:
-  title: 'Digital Content'
-  url: <%= "#{ENV['DIGITAL_CONTENT_SERVICE']}/healthcheck" %>
-  id: 'digital-content-service'
-
 CITATIONS_SERVICE:
   title: 'Citations'
   url: <%= "#{ENV['CITATIONS_SERVICE']}/healthcheck" %>
   id: 'citations-service'
 
-SEARCH_SERVICE:
- title: 'Search'
- url: <%= "#{ENV['SEARCH_SERVICE']}/healthcheck" %>
- id: 'search-service'
+DIGITAL_CONTENT_SERVICE:
+ title: 'Digital Content'
+ url: <%= "#{ENV['DIGITAL_CONTENT_SERVICE']}/healthcheck" %>
+ id: 'digital-content-service'
 
 ILS_SERVICE:
   title: 'ILS Connect'
   url: <%= "#{ENV['ILS_SERVICE']}/healthcheck" %>
   id: 'ils-service'
+
+PDA_SERVICE:
+ title: 'PDA'
+ url: <%= "#{ENV['PDA_SERVICE']}/healthcheck" %>
+ id: 'ils-service'
+
+SEARCH_SERVICE:
+ title: 'Search'
+ url: <%= "#{ENV['SEARCH_SERVICE']}/healthcheck" %>
+ id: 'search-service'
 
 SUGGESTER_SERVICE:
   title: 'Suggester'
