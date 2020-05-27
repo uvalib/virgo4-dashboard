@@ -90,6 +90,11 @@ SOLR_IMAGES_POOL_SERVICE:
  url: <%= "#{ENV['SOLR_IMAGES_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-images-pool-service'
 
+SOLR_MAPS_POOL_SERVICE:
+ title: 'SOLR Maps'
+ url: <%= "#{ENV['SOLR_MAPS_POOL_SERVICE']}/healthcheck" %>
+ id: 'solr-maps-pool-service'
+
 SOLR_MUSIC_RECORDINGS_POOL_SERVICE:
  title: 'SOLR Music Recordings'
  url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>

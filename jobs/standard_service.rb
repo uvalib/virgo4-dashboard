@@ -14,6 +14,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
                'SOLR_ARCHIVAL_POOL_SERVICE',
                'SOLR_CATALOG_POOL_SERVICE',
                'SOLR_IMAGES_POOL_SERVICE',
+               'SOLR_MAPS_POOL_SERVICE',
                'SOLR_MUSIC_RECORDINGS_POOL_SERVICE',
                'SOLR_MUSICAL_SCORES_POOL_SERVICE',
                'SOLR_SERIALS_POOL_SERVICE',
