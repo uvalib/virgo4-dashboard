@@ -1,12 +1,10 @@
-<% content_for :title do %><%= "Virgo4 Pools (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
+<% content_for :title do %><%= "Virgo4 Solr Pools (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
 <div class="gridster">
-   <center><div style="font-size: 22px"><a href="/virgo4-main" class="pull-left">&nbsp;previous</a><%= "Virgo4 Pools (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-ingest-inbound-minute" class="pull-right">next&nbsp;</a></div></center>
+   <center><div style="font-size: 22px"><a href="/virgo4-main" class="pull-left">&nbsp;previous</a><%= "Virgo4 Solr Pools (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-other-pools" class="pull-right">next&nbsp;</a></div></center>
 
   <ul>
 
-     <% services = [ 'EDS_ARTICLES_POOL_SERVICE',
-                     'JMRL_POOL_SERVICE',
-                     'SOLR_ARCHIVAL_POOL_SERVICE',
+     <% services = [ 'SOLR_ARCHIVAL_POOL_SERVICE',
                      'SOLR_CATALOG_POOL_SERVICE',
                      'SOLR_IMAGES_POOL_SERVICE',
                      'SOLR_MAPS_POOL_SERVICE',
@@ -15,8 +13,7 @@
                      'SOLR_SERIALS_POOL_SERVICE',
                      'SOLR_SOUND_RECORDINGS_POOL_SERVICE',
                      'SOLR_THESIS_POOL_SERVICE',
-                     'SOLR_VIDEO_POOL_SERVICE',
-                     'WORLDCAT_POOL_SERVICE' ] %>
+                     'SOLR_VIDEO_POOL_SERVICE'  ] %>
      <% services.each do |key| %>
 
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
@@ -24,6 +21,12 @@
         </li>
 
      <% end %>
+
+    <% 2.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
 
   </ul>
 </div>

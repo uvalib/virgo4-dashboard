@@ -1,0 +1,25 @@
+<% content_for :title do %><%= "Virgo4 Other Pools (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
+<div class="gridster">
+   <center><div style="font-size: 22px"><a href="/virgo4-solr-pools" class="pull-left">&nbsp;previous</a><%= "Virgo4 Other Pools (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-ingest-inbound-minute" class="pull-right">next&nbsp;</a></div></center>
+
+  <ul>
+
+     <% services = [ 'EDS_ARTICLES_POOL_SERVICE',
+                     'JMRL_POOL_SERVICE',
+                     'WORLDCAT_POOL_SERVICE' ] %>
+     <% services.each do |key| %>
+
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+           <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Statusbox" data-title="<%= "#{CONFIG[key]['title']}" %>" data-text="Down"></div>
+        </li>
+
+     <% end %>
+
+    <% 9.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+  </ul>
+</div>
