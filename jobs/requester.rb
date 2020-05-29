@@ -5,5 +5,5 @@ require 'httparty'
 
 class Requester
    include HTTParty
-   default_timeout 5
+   default_timeout 15
 end
