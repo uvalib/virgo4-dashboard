@@ -3,19 +3,22 @@
 #   exit 1
 #fi
 
-#echo "*****************************************"
-#echo "building on $DOCKER_HOST"
-#echo "*****************************************"
+echo "*****************************************"
+echo "building on $DOCKER_HOST"
+echo "*****************************************"
+
+if [ -z "$DOCKER_HOST" ]; then
+   DOCKER_TOOL=docker
+else
+   DOCKER_TOOL=docker-17.04.0
+fi
 
 # set the definitions
 INSTANCE=virgo4-dashboard
 NAMESPACE=uvadave
 
-# pull base image to ensure we have the latest
-docker pull alpine:3.10
-
 # build the image
-docker build -f package/Dockerfile -t $NAMESPACE/$INSTANCE .
+$DOCKER_TOOL build -f package/Dockerfile -t $NAMESPACE/$INSTANCE .
 
 # return status
 exit $?
