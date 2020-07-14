@@ -102,4 +102,26 @@ class Processor
 
   end
 
+  def self.aws_custom_metrics( metric_name, last_n_minutes, data_sink )
+
+    end_time = Time.now
+    start_time = end_time - (last_n_minutes.to_i * 60)
+
+    resp = @@aws_cw_client.get_metric_statistics({
+                                                     namespace: "LogMetrics",
+                                                     metric_name: metric_name,
+                                                     start_time: start_time,
+                                                     end_time: end_time,
+                                                     period: 60,
+                                                     statistics: ["Sum"],
+                                                 })
+
+    the_sum = 0
+    resp.datapoints.each do |dp|
+      the_sum += dp.sum
+    end
+    send_event( data_sink, { value: the_sum } )
+
+  end
+
 end

@@ -3,3 +3,4 @@ history.yml
 .idea
 env.set
 env.unset
+tmp

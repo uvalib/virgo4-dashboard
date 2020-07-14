@@ -1,0 +1,26 @@
+<% content_for :title do %><%= "Virgo4 Searches (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
+<div class="gridster">
+   <center><div style="font-size: 22px"><a href="/virgo4-other-pools" class="pull-left">&nbsp;previous</a><%= "Virgo4 Searches (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-ingest-inbound-minute" class="pull-right">next&nbsp;</a></div></center>
+
+  <ul>
+
+    <% services = [ 'SEARCH_COUNT_5M',
+                    'SEARCH_COUNT_15M',
+                    'SEARCH_COUNT_60M',
+                    'SEARCH_COUNT_24H' ] %>
+    <% services.each do |key| %>
+
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="<%= "#{CONFIG[key]['id']}" %>" data-view="Meter" data-title="<%= "#{CONFIG[key]['title']}" %>" data-min="0" data-max="<%= "#{CONFIG[key]['scale']}" %>" data-moreinfo=""></div>
+      </li>
+
+    <% end %>
+
+    <% 8.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
+
+  </ul>
+</div>

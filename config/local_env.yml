@@ -251,5 +251,37 @@ INGEST_IMAGE_DOC_QUEUE_OUT:
   id: 'image-doc-out-count'
 
 #
+# custom metrics
+#
+
+SEARCH_COUNT_5M:
+ title: 'Searches (last 5m)'
+ metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ last_n_minutes: '5'
+ scale: '500'
+ id: 'total-search-count-5-m'
+
+SEARCH_COUNT_15M:
+ title: 'Searches (last 15m)'
+ metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ last_n_minutes: '15'
+ scale: '1500'
+ id: 'total-search-count-15-m'
+
+SEARCH_COUNT_60M:
+ title: 'Searches (last 60m)'
+ metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ last_n_minutes: '60'
+ scale: '10000'
+ id: 'total-search-count-60-m'
+
+SEARCH_COUNT_24H:
+ title: 'Searches (last 24h)'
+ metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ last_n_minutes: '1440'
+ scale: '100000'
+ id: 'total-search-count-24-h'
+
+#
 # end of file
 #
