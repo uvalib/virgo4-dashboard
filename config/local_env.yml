@@ -15,6 +15,11 @@ CLIENT_LANDING:
 # healthcheck endpoints
 #
 
+AVAILABILITY_SERVICE:
+ title: 'Availability'
+ url: <%= "#{ENV['AVAILABILITY_SERVICE']}/healthcheck" %>
+ id: 'availability-service'
+
 CLIENT_SERVICE:
  title: 'Client'
  url: <%= "#{ENV['CLIENT_SERVICE']}/healthcheck" %>
