@@ -14,6 +14,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
                'SOLR_REPLICA_1',
                'SOLR_ARCHIVAL_POOL_SERVICE',
                'SOLR_CATALOG_POOL_SERVICE',
+               'SOLR_HATHITRUST_POOL_SERVICE',
                'SOLR_IMAGES_POOL_SERVICE',
                'SOLR_MAPS_POOL_SERVICE',
                'SOLR_MUSIC_RECORDINGS_POOL_SERVICE',
@@ -21,6 +22,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
                'SOLR_SERIALS_POOL_SERVICE',
                'SOLR_SOUND_RECORDINGS_POOL_SERVICE',
                'SOLR_THESIS_POOL_SERVICE',
+               'SOLR_UVALIBRARY_POOL_SERVICE',
                'SOLR_VIDEO_POOL_SERVICE',
                'SUGGESTER_SERVICE',
                'WORLDCAT_POOL_SERVICE' ]
