@@ -1,12 +1,13 @@
-<% content_for :title do %><%= "Search Other Pools (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
+<% content_for :title do %><%= "Search Infrastructure (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
 <div class="gridster">
-   <center><div style="font-size: 22px"><a href="/virgo4-solr-pools" class="pull-left">&nbsp;previous</a><%= "Search Other Pools (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-infrastructure" class="pull-right">next&nbsp;</a></div></center>
+   <center><div style="font-size: 22px"><a href="/virgo4-other-pools" class="pull-left">&nbsp;previous</a><%= "Search Infrastructure (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-searches" class="pull-right">next&nbsp;</a></div></center>
 
   <ul>
 
-     <% services = [ 'EDS_ARTICLES_POOL_SERVICE',
-                     'JMRL_POOL_SERVICE',
-                     'WORLDCAT_POOL_SERVICE' ] %>
+     <% services = [
+                     'SOLR_MASTER',
+                     'SOLR_REPLICA_0',
+                     'SOLR_REPLICA_1' ] %>
      <% services.each do |key| %>
 
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">

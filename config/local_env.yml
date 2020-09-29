@@ -50,6 +50,11 @@ SEARCH_SERVICE:
  url: <%= "#{ENV['SEARCH_SERVICE']}/healthcheck" %>
  id: 'search-service'
 
+SHELF_BROWSE_SERVICE:
+ title: 'Shelf Browse'
+ url: <%= "#{ENV['SHELF_BROWSE_SERVICE']}/healthcheck" %>
+ id: 'shelf-browse-service'
+
 SUGGESTER_SERVICE:
   title: 'Suggester'
   url: <%= "#{ENV['SUGGESTER_SERVICE']}/healthcheck" %>

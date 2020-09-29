@@ -9,6 +9,7 @@ SCHEDULER.every '60s', allow_overlapping: false do
                'PDA_SERVICE',
                'JMRL_POOL_SERVICE',
                'SEARCH_SERVICE',
+               'SHELF_BROWSE_SERVICE',
                'SOLR_MASTER',
                'SOLR_REPLICA_0',
                'SOLR_REPLICA_1',

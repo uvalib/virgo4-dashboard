@@ -29,7 +29,7 @@ configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
 
   # default route
-  set :default_dashboard, 'virgo4-main'
+  set :default_dashboard, 'virgo4-services'
 
   helpers do
     def protected!

@@ -1,6 +1,6 @@
-<% content_for :title do %><%= "Virgo4 Main (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
+<% content_for :title do %><%= "Search Services (#{ENV[ 'ENVIRONMENT' ]})" %><% end %>
 <div class="gridster">
-   <center><div style="font-size: 22px"><a href="/virgo4-ingest-pipeline-hour" class="pull-left">&nbsp;previous</a><%= "Virgo4 Main (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-solr-pools" class="pull-right">next&nbsp;</a></div></center>
+   <center><div style="font-size: 22px"><a href="/virgo4-ingest-pipeline-hour" class="pull-left">&nbsp;previous</a><%= "Search Services (#{ENV[ 'ENVIRONMENT' ]})" %><a href="/virgo4-solr-pools" class="pull-right">next&nbsp;</a></div></center>
 
   <ul>
 
@@ -15,14 +15,12 @@
 
      <% services = [ 'CLIENT_SERVICE',
                      'SEARCH_SERVICE',
-                     'SOLR_MASTER',
-                     'SOLR_REPLICA_0',
-                     'SOLR_REPLICA_1',
                      'AVAILABILITY_SERVICE',
                      'CITATIONS_SERVICE',
                      'DIGITAL_CONTENT_SERVICE',
                      'ILS_SERVICE',
                      'PDA_SERVICE',
+                     'SHELF_BROWSE_SERVICE',
                      'SUGGESTER_SERVICE'] %>
      <% services.each do |key| %>
 
@@ -31,6 +29,12 @@
         </li>
 
      <% end %>
+
+    <% 2.times do || %>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
+      </li>
+    <% end %>
 
   </ul>
 </div>
