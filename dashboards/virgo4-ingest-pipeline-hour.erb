@@ -7,7 +7,6 @@
     <% services = [ 'INGEST_TRACKSYS_ENRICH_QUEUE_IN',
                     'INGEST_DEFAULT_SOLR_UPDATE_QUEUE_IN',
                     'INGEST_IMAGE_SOLR_UPDATE_QUEUE_IN',
-                    'INGEST_IIIF_CACHE_QUEUE_IN',
                     'INGEST_CACHE_QUEUE_IN' ] %>
      <% services.each do |key| %>
 
@@ -17,7 +16,7 @@
 
      <% end %>
 
-    <% 1.times do || %>
+    <% 2.times do || %>
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
         <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
       </li>
@@ -26,7 +25,6 @@
     <% services = [ 'INGEST_TRACKSYS_ENRICH_QUEUE_OUT',
                     'INGEST_DEFAULT_SOLR_UPDATE_QUEUE_OUT',
                     'INGEST_IMAGE_SOLR_UPDATE_QUEUE_OUT',
-                    'INGEST_IIIF_CACHE_QUEUE_OUT',
                     'INGEST_CACHE_QUEUE_OUT' ] %>
     <% services.each do |key| %>
 
@@ -36,7 +34,7 @@
 
     <% end %>
 
-    <% 1.times do || %>
+    <% 2.times do || %>
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
         <div data-id="blank" data-view="Comments" data-title="Blank" data-text=""></div>
       </li>

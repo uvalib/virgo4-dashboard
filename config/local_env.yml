@@ -198,18 +198,6 @@ INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
 # pipeline queues
 #
 
-INGEST_IIIF_CACHE_QUEUE_IN:
-  title: 'IIF Cache'
-  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesSent'
-  id: 'iiif-cache-in-count'
-
-INGEST_IIIF_CACHE_QUEUE_OUT:
-  title: ''
-  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
-  metric: 'NumberOfMessagesDeleted'
-  id: 'iiif-cache-out-count'
-
 INGEST_TRACKSYS_ENRICH_QUEUE_IN:
  title: 'TrackSys'
  queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
@@ -260,13 +248,13 @@ INGEST_CACHE_QUEUE_OUT:
 
 INGEST_IMAGE_DOC_QUEUE_IN:
   title: 'Image Doc'
-  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+  queue: <%= "virgo4-ingest-image-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
   metric: 'NumberOfMessagesSent'
   id: 'image-doc-in-count'
 
 INGEST_IMAGE_DOC_QUEUE_OUT:
   title: ''
-  queue: <%= "virgo4-ingest-iiif-manifest-cache-#{ENV[ 'ENVIRONMENT' ]}" %>
+  queue: <%= "virgo4-ingest-image-solr-update-#{ENV[ 'ENVIRONMENT' ]}" %>
   metric: 'NumberOfMessagesDeleted'
   id: 'image-doc-out-count'
 

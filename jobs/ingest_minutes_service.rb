@@ -7,7 +7,6 @@ SCHEDULER.every '60s', allow_overlapping: false do
                     'INGEST_DEFAULT_SOLR_UPDATE_QUEUE',
                     'INGEST_IMAGE_SOLR_UPDATE_QUEUE',
                     'INGEST_IMAGE_DOC_QUEUE',
-                    'INGEST_IIIF_CACHE_QUEUE',
                     'INGEST_CACHE_QUEUE' ]
   queue_configs.each do |queue_config|
 
