@@ -3,7 +3,6 @@ SCHEDULER.every '60s', allow_overlapping: false do
   services = [ 'AVAILABILITY_SERVICE',
                'CITATIONS_SERVICE',
                'CLIENT_SERVICE',
-               'DIGITAL_CONTENT_SERVICE',
                'EDS_ARTICLES_POOL_SERVICE',
                'ILS_SERVICE',
                'PDA_SERVICE',

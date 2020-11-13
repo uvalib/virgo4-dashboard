@@ -30,11 +30,6 @@ CITATIONS_SERVICE:
   url: <%= "#{ENV['CITATIONS_SERVICE']}/healthcheck" %>
   id: 'citations-service'
 
-DIGITAL_CONTENT_SERVICE:
- title: 'Digital Content'
- url: <%= "#{ENV['DIGITAL_CONTENT_SERVICE']}/healthcheck" %>
- id: 'digital-content-service'
-
 ILS_SERVICE:
   title: 'ILS Connect'
   url: <%= "#{ENV['ILS_SERVICE']}/healthcheck" %>
