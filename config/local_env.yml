@@ -193,17 +193,29 @@ INGEST_SIRSI_MARC_CONVERT_QUEUE_OUT:
 # pipeline queues
 #
 
-INGEST_TRACKSYS_ENRICH_QUEUE_IN:
- title: 'TrackSys'
+INGEST_IMAGE_TRACKSYS_ENRICH_QUEUE_IN:
+ title: 'Img TrkSys'
+ queue: <%= "virgo4-ingest-image-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesSent'
+ id: 'image-tracksys-enrich-in-count'
+
+INGEST_IMAGE_TRACKSYS_ENRICH_QUEUE_OUT:
+ title: ''
+ queue: <%= "virgo4-ingest-image-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: 'NumberOfMessagesDeleted'
+ id: 'image-tracksys-enrich-out-count'
+
+INGEST_SIRSI_TRACKSYS_ENRICH_QUEUE_IN:
+ title: 'Sirsi TrkSys'
  queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesSent'
- id: 'tracksys-enrich-in-count'
+ id: 'sirsi-tracksys-enrich-in-count'
 
-INGEST_TRACKSYS_ENRICH_QUEUE_OUT:
+INGEST_SIRSI_TRACKSYS_ENRICH_QUEUE_OUT:
  title: ''
  queue: <%= "virgo4-ingest-sirsi-tracksys-enrich-#{ENV[ 'ENVIRONMENT' ]}" %>
  metric: 'NumberOfMessagesDeleted'
- id: 'tracksys-enrich-out-count'
+ id: 'sirsi-tracksys-enrich-out-count'
 
 INGEST_DEFAULT_SOLR_UPDATE_QUEUE_IN:
  title: 'Def SOLR'
