@@ -80,16 +80,6 @@ JMRL_POOL_SERVICE:
   url: <%= "#{ENV['JMRL_POOL_SERVICE']}/healthcheck" %>
   id: 'jmrl-pool-service'
 
-SOLR_ARCHIVAL_POOL_SERVICE:
-  title: 'Archival'
-  url: <%= "#{ENV['SOLR_ARCHIVAL_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-archival-pool-service'
-
-SOLR_CATALOG_POOL_SERVICE:
- title: 'Catalog'
- url: <%= "#{ENV['SOLR_CATALOG_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-catalog-pool-service'
-
 SOLR_HATHITRUST_POOL_SERVICE:
  title: 'HathiTrust'
  url: <%= "#{ENV['SOLR_HATHITRUST_POOL_SERVICE']}/healthcheck" %>
@@ -100,45 +90,10 @@ SOLR_IMAGES_POOL_SERVICE:
  url: <%= "#{ENV['SOLR_IMAGES_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-images-pool-service'
 
-SOLR_MAPS_POOL_SERVICE:
- title: 'Maps'
- url: <%= "#{ENV['SOLR_MAPS_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-maps-pool-service'
-
-SOLR_MUSIC_RECORDINGS_POOL_SERVICE:
- title: 'Music Recordings'
- url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-music-rec-pool-service'
-
-SOLR_MUSICAL_SCORES_POOL_SERVICE:
-  title: 'Musical Scores'
-  url: <%= "#{ENV['SOLR_MUSICAL_SCORES_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-musical-score-pool-service'
-
-SOLR_SERIALS_POOL_SERVICE:
-  title: 'Serials'
-  url: <%= "#{ENV['SOLR_SERIALS_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-serials-pool-service'
-
-SOLR_SOUND_RECORDINGS_POOL_SERVICE:
- title: 'Sound Recordings'
- url: <%= "#{ENV['SOLR_MUSIC_RECORDINGS_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-sound-rec-pool-service'
-
-SOLR_THESIS_POOL_SERVICE:
-  title: 'Thesis'
-  url: <%= "#{ENV['SOLR_THESIS_POOL_SERVICE']}/healthcheck" %>
-  id: 'solr-thesis-pool-service'
-
 SOLR_UVALIBRARY_POOL_SERVICE:
  title: 'UVa Library'
  url: <%= "#{ENV['SOLR_UVALIBRARY_POOL_SERVICE']}/healthcheck" %>
  id: 'solr-uva-library-pool-service'
-
-SOLR_VIDEO_POOL_SERVICE:
- title: 'Video'
- url: <%= "#{ENV['SOLR_VIDEO_POOL_SERVICE']}/healthcheck" %>
- id: 'solr-video-pool-service'
 
 WORLDCAT_POOL_SERVICE:
   title: 'WorldCat'
