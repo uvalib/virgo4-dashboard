@@ -231,31 +231,31 @@ INGEST_IMAGE_DOC_QUEUE_OUT:
 
 SEARCH_COUNT_5M:
  title: 'Last 5 min'
- metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: <%= "total-count-search-ws-#{ENV[ 'ENVIRONMENT' ]}" %>
  last_n_minutes: '5'
  scale: '500'
- id: 'total-search-count-5-m'
+ id: 'total-count-search-5-m'
 
 SEARCH_COUNT_15M:
  title: 'Last 15 min'
- metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: <%= "total-count-search-ws-#{ENV[ 'ENVIRONMENT' ]}" %>
  last_n_minutes: '15'
  scale: '1500'
- id: 'total-search-count-15-m'
+ id: 'total-count-search-15-m'
 
 SEARCH_COUNT_60M:
  title: 'Last hour'
- metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: <%= "total-count-search-ws-#{ENV[ 'ENVIRONMENT' ]}" %>
  last_n_minutes: '60'
  scale: '10000'
- id: 'total-search-count-60-m'
+ id: 'total-count-search-60-m'
 
 SEARCH_COUNT_24H:
  title: 'Last 24 hrs'
- metric: <%= "total-search-count-#{ENV[ 'ENVIRONMENT' ]}" %>
+ metric: <%= "total-count-search-ws-#{ENV[ 'ENVIRONMENT' ]}" %>
  last_n_minutes: '1440'
  scale: '100000'
- id: 'total-search-count-24-h'
+ id: 'total-count-search-24-h'
 
 #
 # end of file
