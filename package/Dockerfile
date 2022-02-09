@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM public.ecr.aws/docker/library/alpine:3.15
 
 # update the packages
 RUN apk update && apk upgrade && apk add bash tzdata ruby ruby-dev openssl-dev build-base nodejs ca-certificates && rm -rf /var/cache/apk/*
